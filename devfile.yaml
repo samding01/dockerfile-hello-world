@@ -2,7 +2,7 @@ schemaVersion: 2.1.0
 attributes:
   controller.devfile.io/storage-type: ephemeral
 metadata:
-  name: big
+  name: dockerfile-hello-world
 components:
   - name: tooling-container
     container:
