@@ -1,0 +1,18 @@
+schemaVersion: 2.1.0
+attributes:
+  controller.devfile.io/storage-type: ephemeral
+metadata:
+  name: big
+components:
+  - name: tooling-container
+    container:
+      image: quay.io/devfile/universal-developer-image:ubi8-latest
+      memoryRequest: 2Gi
+      memoryLimit: 16Gi
+      cpuRequest: 2000m
+      cpuLimit: 8000m
+commands:
+  - id: command-using-env
+    exec:
+      component: tooling-container
+      commandLine: echo "Hello $USER"
