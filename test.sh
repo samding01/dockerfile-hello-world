@@ -52,6 +52,6 @@ export PROJECT=$(oc project -q)
 export IMG="${REG}/${PROJECT}/hello"
 
  podman login --tls-verify=false --username ${USER} --password ${TKN} ${REG}
- podman build -t ${IMG} .
+ podman build -t ${IMG} -f Dockerfile* .
  podman push --tls-verify=false ${IMG}
  podman run --rm ${IMG}
