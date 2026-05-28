@@ -47,7 +47,8 @@ KUBEDOCK_ENABLED="true"
 
 export USER=$(oc whoami)
 export TKN=$(oc whoami -t)
-export REG="10.0.158.178:5000"
+export REG="image-registry.openshift-image-registry.svc:5000"
+#export REG="10.0.158.178:5000"
 export PROJECT=$(oc project -q)
 export IMG="${REG}/${PROJECT}/hello"
 
